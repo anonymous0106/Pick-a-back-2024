@@ -9,7 +9,39 @@ First of all, we would like to express our sincere gratitude to the open source 
 ---
 
 ### Ready for data
-Download the [CIFAR-100 dataset](https://www.dropbox.com/scl/fo/6tcsld33cuptccyu3ortl/h?dl=0&rlkey=8tgs3nqfdqxk6y5nssnw0uf6z) in the directory 'data/' and unzip the file.
+Download the CIFAR-100 dataset in the directory 'data/' and unzip the file. The structure of the dataset is as follows:
+```
+└─cifar100_org
+    ├─test
+    │  ├─aquatic_mammals
+    │  │  ├─beaver
+    │  │  ├─dolphin
+    │  │  ├─otter
+    │  │  ├─seal
+    │  │  └─whale
+    │  ├─ ...
+    │  └─vehicles_2
+    │      ├─lawn_mower
+    │      ├─rocket
+    │      ├─streetcar
+    │      ├─tank
+    │      └─tractor
+    └─train
+        ├─aquatic_mammals
+        │  ├─beaver
+        │  ├─dolphin
+        │  ├─otter
+        │  ├─seal
+        │  └─whale
+        ├─ ...
+        └─vehicles_2
+            ├─lawn_mower
+            ├─rocket
+            ├─streetcar
+            ├─tank
+            └─tractor
+```
+All the subclasses should be located under the superclass. Please check the hierarchy of the dataset [here](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 ## STEP 1) Baseline accuracy
 Use the following command to train the scratch model for each task. This accuracy is used for the threshold of model expansion decision and pruning ratio selection.
